@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+"""
+DECIDIR_DESENVOLVER_DTGE_v1.json
+
+Evento formal: Usar DTGE para desenvolver DTGE.
+Meta-governança autorizada.
+"""
+
+import json
+from datetime import datetime
+
+decisao = {
+    "event_type": "DECIDIR",
+    "event_id": "EVT-DECIDIR-DTGE-DEV-001",
+    "timestamp_utc": datetime.utcnow().isoformat() + "Z",
+    "autorizado_por": "CEO",
+    "titulo": "Usar DTGE para desenvolver DTGE (Meta-governança)",
+    "descricao": "Iniciar desenvolvimento do próprio DTGE usando seu próprio sistema de governança.",
+    "racionalidade": [
+        "Validação dogmática: se DTGE é um sistema de governança, deve conseguir se autogovernar",
+        "Automatização de desenvolvimento: reduz overhead manual",
+        "Confiança: cada artefato criado é registrado, auditável e reversível",
+        "Melhor qualidade: força seguir próprias regras",
+    ],
+    "mudancas_autorizadas": [
+        "Criar Qualificador Intenção (agente 02) com contrato + código",
+        "Implementar Coletor Continuidade (agente 01) com código real",
+        "Executar testes de integração ponta-a-ponta",
+        "Fechar lacunas conhecidas do Orquestrador",
+        "Gerar GitHub Actions workflow para CI/CD automático",
+    ],
+    "restrições": [
+        "Nenhuma mudança pode executar sem passar pelo pipeline (Orq → Sentinela → Arquiteto → Analista → Humano)",
+        "Todo artefato deve ter contrato ANTES de código",
+        "Cada mudança registra hash e gera evento auditável",
+        "Rollback sempre possível",
+    ],
+    "pendencias_resolvidas": [
+        "02_Qualificador_Intencao: CONTRATO_QUALIFICADOR_INTENCAO_v1.md criado",
+        "Qualificador implementação: ferramenta_qualificador_intencao_standalone.py pronto",
+    ],
+    "proximos_passos": [
+        "Aprovar este DECIDIR formalmente",
+        "Qualificador processa intenções brutas do dev durante a sessão",
+        "Cada requisição passa pelo pipeline DTGE",
+        "Pipeline gera código + testes + documentação automaticamente",
+    ],
+}
+
+print(json.dumps(decisao, indent=2, ensure_ascii=False))
