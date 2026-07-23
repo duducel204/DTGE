@@ -1,0 +1,39 @@
+{
+  "mapeamento": {
+    "dreamteam_core.py": "src/dtge/core.py",
+    "ferramenta_orquestrador_standalone.py": "src/dtge/orquestrador.py",
+    "ferramenta_executor_standalone.py": "src/dtge/executor.py",
+    "ferramenta_sentinela_standalone.py": "src/dtge/sentinela.py",
+    "ferramenta_arquiteto_standalone.py": "src/dtge/arquiteto.py",
+    "ferramenta_analista_standalone.py": "src/dtge/analista.py",
+    "ferramenta_registrador_standalone.py": "src/dtge/registrador.py",
+    "ferramenta_rollback_standalone.py": "src/dtge/rollback.py",
+    "token_autorizacao_dtge.py": "src/dtge/token_autorizacao.py",
+    "CONTRATO_ORQUESTRADOR_v1.md": "contracts/CONTRATO_ORQUESTRADOR_v1.md",
+    "CONTRATO_EXECUTOR_v1.md": "contracts/CONTRATO_EXECUTOR_v1.md",
+    "CONTRATO_SENTINELA_v1.md": "contracts/CONTRATO_SENTINELA_v1.md",
+    "CONTRATO_ARQUITETO_v1.md": "contracts/CONTRATO_ARQUITETO_v1.md",
+    "CONTRATO_ANALISTA_v1.md": "contracts/CONTRATO_ANALISTA_v1.md",
+    "CONTRATO_REGISTRADOR_v1.md": "contracts/CONTRATO_REGISTRADOR_v1.md",
+    "CONTRATO_ROLLBACK_v1.md": "contracts/CONTRATO_ROLLBACK_v1.md"
+  },
+  "decidir_ref": "artefatos/eventos/DECIDIR_20260723T182424154030_c37fd5.json",
+  "sucessoes": [
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_dreamteam_core_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_ferramenta_orquestrador_standalone_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_ferramenta_executor_standalone_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_ferramenta_sentinela_standalone_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_ferramenta_arquiteto_standalone_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_ferramenta_analista_standalone_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_ferramenta_registrador_standalone_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_ferramenta_rollback_standalone_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_token_autorizacao_dtge_py.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_CONTRATO_ORQUESTRADOR_v1_md.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_CONTRATO_EXECUTOR_v1_md.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_CONTRATO_SENTINELA_v1_md.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_CONTRATO_ARQUITETO_v1_md.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_CONTRATO_ANALISTA_v1_md.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_CONTRATO_REGISTRADOR_v1_md.md",
+    "_BASE/CANONIZACOES/SUCESSAO_GITHUB_CONTRATO_ROLLBACK_v1_md.md"
+  ]
+}

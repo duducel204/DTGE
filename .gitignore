@@ -1,0 +1,17 @@
+# runtime artifacts (generated)
+/var/
+/artefatos/
+# keep contract and canonizations tracked
+# /contracts/ should be versioned
+# /canonizations/ should be versioned
+*.sha256.txt
+
+# python
+__pycache__/
+*.pyc
+# logs
+*.log
+
+# editors
+.vscode/
+.idea/
