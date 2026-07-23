@@ -1,0 +1,53 @@
+# -*- coding: utf-8 -*-
+"""
+AUTORIZACAO_EXECUCAO-TESTE-INTEGRACAO-001.json
+
+Evento Formal: AUTORIZAÇÃO PARA EXECUÇÃO
+Autorizado por: CEO (duducel204)
+Timestamp: 2026-07-23T19:35:00Z
+"""
+
+import json
+from datetime import datetime
+
+autorizacao = {
+    "event_type": "AUTORIZACAO_EXECUCAO",
+    "event_id": "EVT-AUTORIZACAO-TESTE-001",
+    "timestamp_utc": datetime.utcnow().isoformat() + "Z",
+    "autorizado_por": "CEO",
+    "target_id": "TESTE-INTEGRACAO-001",
+    "target_validacao_id": "VALIDACAO-TESTE-INTEGRACAO-20260723T193030Z",
+    "justificativa": "Validar fluxo completo do pipeline DTGE",
+    "decisao": "EXECUTION_AUTHORIZED",
+    "escopo_autorizado": {
+        "agentes": ["Executor", "Registrador"],
+        "acao_principal": "Rodar test_pipeline_integracao.py",
+        "ambiente": "Sandbox isolado (tempdir)",
+        "cleanup": "Automático após sucesso/falha",
+        "artefatos_geraveis": [
+            "TESTE_INTEGRACAO_RESULTS_20260723T193500Z.json",
+            "TESTE_INTEGRACAO_LOG_20260723T193500Z.txt",
+            "HASHES_TESTE_20260723T193500Z.jsonl",
+        ],
+    },
+    "pendencias_checadas": [
+        "✓ Validação 100% CONFORME",
+        "✓ Nenhum bloqueador identificado",
+        "✓ Arquitetura aprovada",
+        "✓ Todos contratos satisfeitos",
+    ],
+    "restricoes": [
+        "Deve rodar em ambiente isolado (sem afetar repo)",
+        "Timeout: 5 minutos máximo",
+        "Falha em qualquer agente: interrompe e registra erro",
+        "Cleanup: remover arquivos temporários após conclusão",
+    ],
+    "metricas_esperadas": {
+        "tempo_total_esperado": "30-60 segundos",
+        "numero_eventos_log": "15-20 eventos DTGE_MASTER.log",
+        "numero_hashes": "9-12 hashes registrados",
+        "criterio_sucesso": "Todos 6 critérios de sucesso da arquitetura atingidos",
+    },
+}
+
+print(json.dumps(autorizacao, indent=2, ensure_ascii=False))
