@@ -1,0 +1,15 @@
+[SIMULADO] Registro de execucao demonstrativa do pipeline Dream Team.
+
+Sequencia executada (simulacao textual, sem efeito real fora destes arquivos):
+1. Orquestrador definiu escopo (contrato do Executor).
+2. Sentinela identificou risco de contrato generico demais.
+3. Arquiteto modelou estados e exigiu rollback minimo.
+4. Analista comparou 3 opcoes e recomendou Opcao B (escopo restrito).
+5. DECIDIR (simulado) aprovou a recomendacao.
+6. AUTORIZACAO_EXECUCAO (simulado) autorizou a criacao do artefato.
+7. Executor (simulado) "executou" = gerou o arquivo de contrato.
+8. Registrador (simulado) confirma o registro abaixo.
+9. Rollback: nao acionado (sem falha detectada).
+
+Nenhum evento acima e uma autorizacao real do usuario. Servem apenas para
+mostrar o formato de saida esperado do pipeline completo.
