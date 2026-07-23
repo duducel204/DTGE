@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+"""
+ARQUITETURA-TESTE-INTEGRACAO-20260723T193020Z.json
+
+Design técnico (Arquiteto)
+Para: Teste de integração ponta a ponta
+"""
+
+import json
+from datetime import datetime
+
+arquitetura = {
+    "id_design": "ARQUITETURA-TESTE-INTEGRACAO-20260723T193020Z",
+    "id_plano_origem": "PLANO-ANALISE-20260723T193010Z",
+    "timestamp_design": datetime.utcnow().isoformat() + "Z",
+    "titulo": "Pipeline de Teste Ponta-a-Ponta",
+    "componentes": {
+        "test_runner": {
+            "descricao": "Orquestrador do teste",
+            "arquivo": "test_pipeline_integracao.py",
+            "responsabilidades": [
+                "Importar todos os agentes",
+                "Executar em ordem correta",
+                "Verificar outputs",
+                "Gerar relatório final",
+            ],
+        },
+        "verificador_hashes": {
+            "descricao": "Validar integridade de artefatos",
+            "arquivo": "função em test_pipeline_integracao.py",
+            "responsabilidades": [
+                "Calcular hash de cada artefato",
+                "Comparar com registry",
+                "Alertar se diferenças encontradas",
+            ],
+        },
+        "collector_logs": {
+            "descricao": "Agregar todos os logs",
+            "arquivo": "função em test_pipeline_integracao.py",
+            "responsabilidades": [
+                "Ler DTGE_MASTER.log",
+                "Filtrar eventos do teste",
+                "Gerar summary",
+            ],
+        },
+    },
+    "fluxo_execucao": [
+        "1. Setup: criar diretório de teste isolado",
+        "2. Qualificador: processar intenção bruta",
+        "3. Orquestrador: gerar plano",
+        "4. Sentinela: auditar riscos",
+        "5. Arquiteto: desenhar solução (este step)",
+        "6. Analista: validar design",
+        "7. Executor: rodar o teste_pipeline_integracao.py",
+        "8. Registrador: salvar todos hashes",
+        "9. Cleanup: remover arquivos temporários",
+        "10. Report: gerar relatório final",
+    ],
+    "criterios_sucesso": [
+        "✓ Todos 7 agentes executaram sem erros",
+        "✓ Cada artefato tem hash registrado",
+        "✓ DTGE_MASTER.log contém 7+ eventos",
+        "✓ Integridade verificada para todos files",
+        "✓ Sem loops infinitos detectados",
+        "✓ Relatório final gerado com sucesso",
+    ],
+}
+
+print(json.dumps(arquitetura, indent=2, ensure_ascii=False))

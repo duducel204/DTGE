@@ -1,0 +1,79 @@
+# -*- coding: utf-8 -*-
+"""
+PLANO-ANALISE-20260723T193010Z.json
+
+Plano de Ação gerado pelo Orquestrador
+Para: Teste de integração ponta a ponta
+"""
+
+import json
+from datetime import datetime
+
+plano_acao = {
+    "id_plano": "PLANO-ANALISE-20260723T193010Z",
+    "id_intencao_origem": "INT-ANALISE-20260723T193000Z",
+    "tipo_plano": "ANALISE",
+    "criticidade": "MEDIA",
+    "parametros": {
+        "tipo_teste": "integracao_ponta_a_ponta",
+        "escopo": "Validar fluxo completo do pipeline DTGE",
+        "alvo": "Todos os 6 agentes em sequência",
+    },
+    "profundidade_ciclo": 0,
+    "requer_aprovacao_humana": False,
+    "timestamp_criacao": datetime.utcnow().isoformat() + "Z",
+    "status": "AGUARDANDO_SENTINELA",
+    "etapas": [
+        {
+            "numero": 1,
+            "agente": "Qualificador",
+            "acao": "Processar intenção bruta",
+            "entrada": "Texto bruto",
+            "saida_esperada": "INT-ANALISE-...json",
+        },
+        {
+            "numero": 2,
+            "agente": "Orquestrador",
+            "acao": "Gerar plano de ação",
+            "entrada": "Intenção qualificada",
+            "saida_esperada": "PLANO-ANALISE-...json",
+        },
+        {
+            "numero": 3,
+            "agente": "Sentinela",
+            "acao": "Auditar riscos",
+            "entrada": "Plano de ação",
+            "saida_esperada": "RISCOS_PLANO-...json",
+        },
+        {
+            "numero": 4,
+            "agente": "Arquiteto",
+            "acao": "Desenhar solução",
+            "entrada": "Plano + Riscos",
+            "saida_esperada": "ARQUITETURA-...json",
+        },
+        {
+            "numero": 5,
+            "agente": "Analista",
+            "acao": "Validar contra contratos",
+            "entrada": "Arquitetura",
+            "saida_esperada": "VALIDACAO-...json",
+        },
+        {
+            "numero": 6,
+            "agente": "Executor",
+            "acao": "Gerar relatório de teste",
+            "entrada": "Validação OK",
+            "saida_esperada": "TESTE_INTEGRACAO-...json + logs",
+        },
+        {
+            "numero": 7,
+            "agente": "Registrador",
+            "acao": "Registrar todos artefatos",
+            "entrada": "Todos os outputs anteriores",
+            "saida_esperada": "Hashes em HASHES_REGISTRY.jsonl",
+        },
+    ],
+}
+
+print(json.dumps(plano_acao, indent=2, ensure_ascii=False))

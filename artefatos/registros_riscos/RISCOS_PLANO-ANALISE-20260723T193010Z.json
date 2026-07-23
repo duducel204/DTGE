@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+RISCOS_PLANO-ANALISE-20260723T193010Z.json
+
+Registro de Riscos (Sentinela)
+Para: Teste de integração ponta a ponta
+"""
+
+import json
+from datetime import datetime
+
+riscos = {
+    "id_plano": "PLANO-ANALISE-20260723T193010Z",
+    "timestamp_auditoria": datetime.utcnow().isoformat() + "Z",
+    "riscos": [
+        {
+            "tipo": "DEPENDENCIA_TEMPORAL",
+            "severidade": "MEDIA",
+            "descricao": "Teste sequencial depende de ordem exata dos agentes",
+            "recomendacao": "Implementar timeouts e retry logic",
+        },
+        {
+            "tipo": "ARQUIVO_INTERMEDIARIO",
+            "severidade": "BAIXA",
+            "descricao": "Múltiplos arquivos JSON gerados podem ocupar espaço",
+            "recomendacao": "Usar diretório de teste isolado (cleanup após)",
+        },
+        {
+            "tipo": "VALIDACAO_CRUZADA",
+            "severidade": "MEDIA",
+            "descricao": "Hash registry precisa validar integridade entre etapas",
+            "recomendacao": "Implementar função de verificação de cadeia",
+        },
+    ],
+    "status": "AUDITADO",
+    "liberado_para": "ARQUITETO",
+    "resumo": "3 riscos encontrados, nenhum bloqueador. Recomendações técnicas mapeadas.",
+}
+
+print(json.dumps(riscos, indent=2, ensure_ascii=False))

@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+"""
+INT-ANALISE-20260723T193000Z.json
+
+Intenção Qualificada: Realizar primeiro teste de integração ponta a ponta do sistema
+
+Processada por: Qualificador Intenção
+Timestamp: 2026-07-23T19:30:00Z
+"""
+
+import json
+from datetime import datetime
+
+intencao_qualificada = {
+    "id_intencao": "INT-ANALISE-20260723T193000Z",
+    "tipo": "ANALISE",
+    "criticidade": "MEDIA",
+    "parametros": {
+        "tipo_teste": "integracao_ponta_a_ponta",
+        "agentes_envolvidos": [
+            "Orquestrador",
+            "Sentinela",
+            "Arquiteto",
+            "Analista",
+            "Executor",
+            "Registrador"
+        ],
+        "escopo": "Pipeline completo: Intenção → Plano → Auditoria → Arquitetura → Validação → Execução",
+        "artefatos_esperados": [
+            "Intenção Qualificada (JSON)",
+            "Plano de Ação (JSON)",
+            "Registro de Riscos (JSON)",
+            "Arquitetura (JSON)",
+            "Validação (JSON)",
+            "Log de Execução (txt)",
+            "Hash Registry (JSONL)"
+        ]
+    },
+    "usuario_origem": "dev_team",
+    "timestamp_criacao": datetime.utcnow().isoformat() + "Z",
+    "contexto_continuidade": {
+        "profundidade_ciclo": 0,
+        "historia": "Primeira validação do sistema completo pós-refatoração"
+    }
+}
+
+print(json.dumps(intencao_qualificada, indent=2, ensure_ascii=False))

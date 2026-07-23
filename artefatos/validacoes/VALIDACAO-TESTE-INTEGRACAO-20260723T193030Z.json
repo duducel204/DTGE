@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+"""
+VALIDACAO-TESTE-INTEGRACAO-20260723T193030Z.json
+
+Validação contra contratos (Analista)
+Para: Teste de integração ponta a ponta
+"""
+
+import json
+from datetime import datetime
+
+validacao = {
+    "id_validacao": "VALIDACAO-TESTE-INTEGRACAO-20260723T193030Z",
+    "id_arquitetura": "ARQUITETURA-TESTE-INTEGRACAO-20260723T193020Z",
+    "timestamp_validacao": datetime.utcnow().isoformat() + "Z",
+    "titulo": "Análise de Conformidade",
+    "verificacoes": {
+        "contrato_orquestrador": {
+            "status": "CONFORME",
+            "verificacoes": [
+                "✓ Recebe intenção qualificada (tipo ANALISE)",
+                "✓ Gera plano com 6 etapas mapeadas",
+                "✓ Não executa, apenas prepara escopo",
+                "✓ Registra criticidade (MEDIA)",
+            ],
+        },
+        "contrato_sentinela": {
+            "status": "CONFORME",
+            "verificacoes": [
+                "✓ Audita riscos técnicos mapeados",
+                "✓ Não bloqueia (nenhum riscos CRITICA)",
+                "✓ Registra mitigações sugeridas",
+                "✓ Libera para Arquiteto",
+            ],
+        },
+        "contrato_arquiteto": {
+            "status": "CONFORME",
+            "verificacoes": [
+                "✓ Desenha componentes principais",
+                "✓ Mapeia fluxo de 10 etapas",
+                "✓ Define critérios de sucesso",
+                "✓ Não valida, apenas propõe",
+            ],
+        },
+        "contrato_analista": {
+            "status": "CONFORME",
+            "verificacoes": [
+                "✓ Verifica conformidade com contratos acima",
+                "✓ Mapeia 4 conformidades",
+                "✓ Gera relatório de validação",
+                "✓ Libera para Executor",
+            ],
+        },
+        "contrato_executor": {
+            "status": "PRONTO",
+            "verificacoes": [
+                "✓ Aguardando AUTORIZACAO_EXECUCAO formal",
+                "✓ Script test_pipeline_integracao.py pronto",
+                "✓ Diretório isolado será criado",
+                "✓ Cleanup automático após testes",
+            ],
+        },
+    },
+    "conformidade_geral": "100% CONFORME",
+    "bloqueadores": "NENHUM",
+    "recomendacao": "APROVADO PARA EXECUÇÃO",
+    "proxima_etapa": "Aguardar AUTORIZACAO_EXECUCAO do CEO para rodar teste_pipeline_integracao.py",
+}
+
+print(json.dumps(validacao, indent=2, ensure_ascii=False))
