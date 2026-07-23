@@ -1,0 +1,17 @@
+{
+  "checkpoint": "pre-migration",
+  "branch": "dtge-v2.0",
+  "timestamp": "2026-07-23T18:55:11Z",
+  "moved": [
+    "dreamteam_core.py -> src/dtge/core.py",
+    "ferramenta_orquestrador_standalone.py -> src/dtge/orquestrador.py",
+    "ferramenta_executor_standalone.py -> src/dtge/executor.py",
+    "ferramenta_sentinela_standalone.py -> src/dtge/sentinela.py",
+    "ferramenta_arquiteto_standalone.py -> src/dtge/arquiteto.py",
+    "ferramenta_analista_standalone.py -> src/dtge/analista.py",
+    "ferramenta_registrador_standalone.py -> src/dtge/registrador.py",
+    "ferramenta_rollback_standalone.py -> src/dtge/rollback.py",
+    "token_autorizacao_dtge.py -> src/dtge/token_autorizacao.py (placeholder created)"
+  ],
+  "note": "Branch dtge-v2.0 is the recorded checkpoint. Originals remain in repo root; new copies created under src/dtge/. To rollback, revert this commit or restore from dtge-v2.0 branch."
+}
